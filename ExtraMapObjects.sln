@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoredBlocksEditor", "ColoredBlocksEditor\ColoredBlocksEditor.csproj", "{3EEE5149-CD15-40BC-925C-DC69F43F80E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtraMapObjectsEditor", "ExtraMapObjectsEditor\ExtraMapObjectsEditor.csproj", "{3EEE5149-CD15-40BC-925C-DC69F43F80E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoredBlocks", "ColoredBlocks.csproj", "{615FD723-E714-4F78-9BAE-DC91790F95C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtraMapObjects", "ExtraMapObjects.csproj", "{615FD723-E714-4F78-9BAE-DC91790F95C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

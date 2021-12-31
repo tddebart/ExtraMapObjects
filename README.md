@@ -1,15 +1,21 @@
-# Colored blocks
-Adds a variety of colored blocks to the MapsExtened
+# ExtraMapObjects
+Adds a variety of extra things to the MapsExtended
 
-## Current colors
-- red
-- green
-- blue
-- yellow
-- orange
-- purple
-- pink
-- brown
-- black
-- white
-- gray
+## Features
+ - Adds colored blocks
+<details>
+ <summary>Current colors</summary>
+
+  - red
+  - green
+  - blue
+  - yellow
+  - purple
+  - orange
+  - brown
+  - pink
+  - cyan
+  - black
+  - white
+  - gray
+</details>

@@ -6,18 +6,18 @@ using MapsExt.MapObjects;
 using UnboundLib;
 using UnityEngine;
 
-namespace ColoredBlocks
+namespace ExtraMapObjects
 {
     [BepInDependency("com.willis.rounds.unbound")]
     [BepInPlugin(ModId, ModName, Version)]
     [BepInProcess("Rounds.exe")]
-    public class ColoredBlocks : BaseUnityPlugin
+    public class ExtraMapObjects : BaseUnityPlugin
     {
-        private const string ModId = "com.bosssloth.rounds.ColoredBlocks";
-        private const string ModName = "ColoredBlocks";
+        private const string ModId = "com.bosssloth.rounds.ExtraMapObjects";
+        private const string ModName = "ExtraMapObjects";
         public const string Version = "1.0.0";
 
-        public static ColoredBlocks instance;
+        public static ExtraMapObjects instance;
 
         private void Start()
         {

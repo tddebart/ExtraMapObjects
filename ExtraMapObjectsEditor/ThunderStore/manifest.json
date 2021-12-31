@@ -2,10 +2,11 @@
   "name": "ExtraMapObjects",
   "version_number": "#VERSION#",
   "website_url": "https://github.com/tddebart/ExtraMapObjects",
-  "description": "Adds a variety of extra things to the MapsExtended",
+  "description": "Adds colored blocks to the mapeditor",
   "dependencies": [
     "willis81808-UnboundLib-2.9.0",
-    "BepInEx-BepInExPack_ROUNDS-5.4.1100",
-    "olavim-MapsExtended-0.9.4"
+    "olavim-MapsExtended-0.9.4",
+    "olavim-MapsExtendedEditor-0.9.4",
+    "BossSloth-ExtraMapObjects-1.0.0"
   ]
 }
