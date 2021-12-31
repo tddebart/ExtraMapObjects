@@ -12,7 +12,14 @@ namespace ExtraMapObjects
 
         public static void Deserialize(GameObject target, Color color)
         {
-            ExtraMapObjects.instance.ExecuteAfterFrames(2, () =>
+            ExtraMapObjects.instance.ExecuteAfterFrames(1, () =>
+            {
+                GameObject.Destroy(target.GetComponent<SpriteMask>());
+                target.GetComponent<SpriteRenderer>().material = defaultMaterial;
+                color.a = 1;
+                target.GetComponent<SpriteRenderer>().color = color;
+            });
+            ExtraMapObjects.instance.ExecuteAfterFrames(5, () =>
             {
                 GameObject.Destroy(target.GetComponent<SpriteMask>());
                 target.GetComponent<SpriteRenderer>().material = defaultMaterial;
@@ -20,6 +27,30 @@ namespace ExtraMapObjects
                 target.GetComponent<SpriteRenderer>().color = color;
             });
         }
+        
+        public static void DeserializePhys(GameObject target, Color color)
+        {
+            ExtraMapObjects.instance.ExecuteAfterFrames(1, () =>
+            {
+                GameObject.Destroy(target.GetComponent<SpriteMask>());
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                target.GetComponent<SpriteRenderer>().material = defaultMaterial;
+                color.a = 1;
+                target.GetComponent<SpriteRenderer>().color = color;
+            });
+            ExtraMapObjects.instance.ExecuteAfterFrames(5, () =>
+            {
+                GameObject.Destroy(target.GetComponent<SpriteMask>());
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                target.GetComponent<SpriteRenderer>().material = defaultMaterial;
+                color.a = 1;
+                target.GetComponent<SpriteRenderer>().color = color;
+            });
+        }
+        
+        #region Normal objects
         
         #region Red
 
@@ -343,6 +374,337 @@ namespace ExtraMapObjects
                 MapObjects.Deserialize(target, new Color(0.4f, 0.4f, 0.4f));
             }
         }
+        
+        #endregion
+        
+        #endregion
+        
+        #region Dynamic objects
+
+        #region RedPhys
+
+        public class RedPhys : SpatialMapObject
+        {
+        }
+
+        [MapObjectSpec(typeof(RedPhys))]
+        public static class RedPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, RedPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(RedPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, Color.red*0.8f);
+            }
+        }
+
+        #endregion
+        
+        #region GreenPhys
+        
+        public class GreenPhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(GreenPhys))]
+        public static class GreenPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, GreenPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(GreenPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, Color.green*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        #region BluePhys
+        
+        public class BluePhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(BluePhys))]
+        public static class BluePhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, BluePhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(BluePhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, Color.blue*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        #region YellowPhys
+        
+        public class YellowPhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(YellowPhys))]
+        public static class YellowPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, YellowPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(YellowPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, Color.yellow*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        #region PurplePhys
+        
+        public class PurplePhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(PurplePhys))]
+        public static class PurplePhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, PurplePhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(PurplePhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(0.5f, 0f, 0.9f));
+            }
+        }
+        
+        #endregion
+        
+        #region OrangePhys
+        
+        public class OrangePhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(OrangePhys))]
+        public static class OrangePhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, OrangePhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(OrangePhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(1f, 0.5f, 0f)*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        #region BrownPhys
+        
+        public class BrownPhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(BrownPhys))]
+        public static class BrownPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, BrownPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(BrownPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(0.5f, 0.25f, 0f));
+            }
+        }
+        
+        #endregion
+        
+        #region PinkPhys
+        
+        public class PinkPhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(PinkPhys))]
+        public static class PinkPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, PinkPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(PinkPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(0.9f, 0.4f, 0.7f));
+            }
+        }
+        
+        #endregion
+        
+        #region CyanPhys
+        
+        public class CyanPhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(CyanPhys))]
+        public static class CyanPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, CyanPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(CyanPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(0.1f, 0.8f, 0.8f)*0.8f);
+            }
+        } 
+        
+        #endregion
+        
+        #region BlackPhys
+        
+        public class BlackPhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(BlackPhys))]
+        public static class BlackPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, BlackPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(BlackPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(0,0,0));
+            }
+        }
+        
+        #endregion
+        
+        #region WhitePhys
+        
+        public class WhitePhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(WhitePhys))]
+        public static class WhitePhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, WhitePhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(WhitePhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(1f, 1f, 1f)*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        // Grey
+        #region GreyPhys
+        
+        public class GreyPhys : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(GreyPhys))]
+        public static class GreyPhysSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, GreyPhys target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(GreyPhys data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhys(target, new Color(0.4f, 0.4f, 0.4f));
+            }
+        }
+        
+        #endregion
         
         #endregion
     }

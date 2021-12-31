@@ -102,6 +102,7 @@
         <Compile Include="ExtraMapObjects.cs" />
         <Compile Include="MapObjects.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="TransformExtension.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include=".gitignore" />

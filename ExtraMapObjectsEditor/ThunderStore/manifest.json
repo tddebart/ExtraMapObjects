@@ -1,5 +1,5 @@
 ﻿{
-  "name": "ExtraMapObjects",
+  "name": "ExtraMapObjectsEditor",
   "version_number": "#VERSION#",
   "website_url": "https://github.com/tddebart/ExtraMapObjects",
   "description": "Adds colored blocks to the mapeditor",
