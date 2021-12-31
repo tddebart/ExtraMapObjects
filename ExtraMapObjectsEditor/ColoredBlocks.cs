@@ -397,4 +397,194 @@ namespace ExtraMapObjectsEditor
     
     #endregion
 
+    #region Dynamic background objects
+    
+    #region RedPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.RedPhysBackg), "Red", "ColoredBlocks | Background")]
+    public static class EditorRedPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.RedPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.RedPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.RedPhysBackg>(MapObjects.RedPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.RedPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.RedPhysBackg>(MapObjects.RedPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    #region GreenPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.GreenPhysBackg), "Green", "ColoredBlocks | Background")]
+    public static class EditorGreenPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.GreenPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.GreenPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.GreenPhysBackg>(MapObjects.GreenPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.GreenPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.GreenPhysBackg>(MapObjects.GreenPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    #region BluePhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.BluePhysBackg), "Blue", "ColoredBlocks | Background")]
+    public static class EditorBluePhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.BluePhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.BluePhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.BluePhysBackg>(MapObjects.BluePhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.BluePhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.BluePhysBackg>(MapObjects.BluePhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    #region YellowPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.YellowPhysBackg), "Yellow", "ColoredBlocks | Background")]
+    public static class EditorYellowPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.YellowPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.YellowPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.YellowPhysBackg>(MapObjects.YellowPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.YellowPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.YellowPhysBackg>(MapObjects.YellowPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    #region PurplePhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.PurplePhysBackg), "Purple", "ColoredBlocks | Background")]
+    public static class EditorPurplePhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.PurplePhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.PurplePhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.PurplePhysBackg>(MapObjects.PurplePhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.PurplePhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.PurplePhysBackg>(MapObjects.PurplePhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    // Orange
+    #region OrangePhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.OrangePhysBackg), "Orange", "ColoredBlocks | Background")]
+    public static class EditorOrangePhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.OrangePhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.OrangePhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.OrangePhysBackg>(MapObjects.OrangePhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.OrangePhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.OrangePhysBackg>(MapObjects.OrangePhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    // Brown
+    #region BrownPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.BrownPhysBackg), "Brown", "ColoredBlocks | Background")]
+    public static class EditorBrownPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.BrownPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.BrownPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.BrownPhysBackg>(MapObjects.BrownPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.BrownPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.BrownPhysBackg>(MapObjects.BrownPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    // Pink
+    #region PinkPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.PinkPhysBackg), "Pink", "ColoredBlocks | Background")]
+    public static class EditorPinkPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.PinkPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.PinkPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.PinkPhysBackg>(MapObjects.PinkPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.PinkPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.PinkPhysBackg>(MapObjects.PinkPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    // Cyan
+    #region CyanPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.CyanPhysBackg), "Cyan", "ColoredBlocks | Background")]
+    public static class EditorCyanPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.CyanPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.CyanPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.CyanPhysBackg>(MapObjects.CyanPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.CyanPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.CyanPhysBackg>(MapObjects.CyanPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    // black
+    #region BlackPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.BlackPhysBackg), "Black", "ColoredBlocks | Background")]
+    public static class EditorBlackPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.BlackPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.BlackPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.BlackPhysBackg>(MapObjects.BlackPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.BlackPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.BlackPhysBackg>(MapObjects.BlackPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    // White
+    #region WhitePhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.WhitePhysBackg), "White", "ColoredBlocks | Background")]
+    public static class EditorWhitePhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.WhitePhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.WhitePhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.WhitePhysBackg>(MapObjects.WhitePhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.WhitePhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.WhitePhysBackg>(MapObjects.WhitePhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    // Grey
+    #region GreyPhysBackg
+    [EditorMapObjectSpec(typeof(MapObjects.GreyPhysBackg), "Grey", "ColoredBlocks | Background")]
+    public static class EditorGreyPhysBackg
+    {
+        [EditorMapObjectPrefab] public static GameObject Prefab => MapObjects.GreyPhysBackgSpec.Prefab;
+
+        [EditorMapObjectSerializer]
+        public static SerializerAction<MapObjects.GreyPhysBackg> Serialize => EditorSpatialSerializer.BuildSerializer<MapObjects.GreyPhysBackg>(MapObjects.GreyPhysBackgSpec.Serialize);
+
+        [EditorMapObjectDeserializer]
+        public static DeserializerAction<MapObjects.GreyPhysBackg> Deserialize => EditorSpatialSerializer.BuildDeserializer<MapObjects.GreyPhysBackg>(MapObjects.GreyPhysBackgSpec.Deserialize);
+    }
+    
+    #endregion
+    
+    #endregion
 }

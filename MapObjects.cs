@@ -50,6 +50,34 @@ namespace ExtraMapObjects
             });
         }
         
+        public static void DeserializePhysBack(GameObject target, Color color)
+        {
+            ExtraMapObjects.instance.ExecuteAfterFrames(1, () =>
+            {
+                GameObject.Destroy(target.GetComponent<SpriteMask>());
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                target.GetComponent<SpriteRenderer>().enabled = true;   
+                target.GetComponent<SpriteRenderer>().material = defaultMaterial;
+                Color.RGBToHSV(color, out var h, out var s, out var v);
+                color = Color.HSVToRGB(h, s, v * 0.75f);
+                color.a = 0.5f;
+                target.GetComponent<SpriteRenderer>().color = color;
+            });
+            ExtraMapObjects.instance.ExecuteAfterFrames(5, () =>
+            {
+                GameObject.Destroy(target.GetComponent<SpriteMask>());
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                GameObject.Destroy(target.transform.TryGetChild(0).gameObject);
+                target.GetComponent<SpriteRenderer>().enabled = true;   
+                target.GetComponent<SpriteRenderer>().material = defaultMaterial;
+                Color.RGBToHSV(color, out var h, out var s, out var v);
+                color = Color.HSVToRGB(h, s, v * 0.75f);
+                color.a = 0.5f; 
+                target.GetComponent<SpriteRenderer>().color = color;
+            });
+        }
+        
         #region Normal objects
         
         #region Red
@@ -705,6 +733,339 @@ namespace ExtraMapObjects
         }
         
         #endregion
+        
+        #endregion
+        
+        
+        
+        
+        #region RedPhysBackg
+
+        public class RedPhysBackg : SpatialMapObject
+        {
+        }
+
+        [MapObjectSpec(typeof(RedPhysBackg))]
+        public static class RedPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, RedPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(RedPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.red*0.8f);
+            }
+        }
+
+        #endregion
+        
+        #region GreenPhysBackg
+        
+        public class GreenPhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(GreenPhysBackg))]
+        public static class GreenPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, GreenPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(GreenPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.green*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        #region BluePhysBackg
+        
+        public class BluePhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(BluePhysBackg))]
+        public static class BluePhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, BluePhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(BluePhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.blue*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        #region YellowPhysBackg
+        
+        public class YellowPhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(YellowPhysBackg))]
+        public static class YellowPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, YellowPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(YellowPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.yellow*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        #region PurplePhysBackg
+        
+        public class PurplePhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(PurplePhysBackg))]
+        public static class PurplePhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, PurplePhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(PurplePhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.magenta*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        //Orange
+        #region OrangePhysBackg
+        
+        public class OrangePhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(OrangePhysBackg))]
+        public static class OrangePhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, OrangePhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(OrangePhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.yellow*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        
+        #region BrownPhysBackg
+        
+        public class BrownPhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(BrownPhysBackg))]
+        public static class BrownPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, BrownPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(BrownPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.yellow*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        
+        #region PinkPhysBackg
+        
+        public class PinkPhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(PinkPhysBackg))]
+        public static class PinkPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, PinkPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(PinkPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.yellow*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        // Cyan
+        #region CyanPhysBackg
+        
+        public class CyanPhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(CyanPhysBackg))]
+        public static class CyanPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, CyanPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(CyanPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.cyan*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        // Black
+        #region BlackPhysBackg
+        
+        public class BlackPhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(BlackPhysBackg))]
+        public static class BlackPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, BlackPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(BlackPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.black*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        // White
+        #region WhitePhysBackg
+        
+        public class WhitePhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(WhitePhysBackg))]
+        public static class WhitePhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, WhitePhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(WhitePhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.white*0.8f);
+            }
+        }
+        
+        #endregion
+        
+        // Grey
+        #region GreyPhysBackg
+        public class GreyPhysBackg : SpatialMapObject
+        {
+        }
+        
+        [MapObjectSpec(typeof(GreyPhysBackg))]
+        public static class GreyPhysBackgSpec
+        {
+            [MapObjectPrefab] public static GameObject Prefab => Resources.Load<GameObject>("4 Map Objects/Box_BG");
+
+            [MapObjectSerializer]
+            public static void Serialize(GameObject instance, GreyPhysBackg target)
+            {
+                SpatialSerializer.Serialize(instance, target);
+            }
+
+            [MapObjectDeserializer]
+            public static void Deserialize(GreyPhysBackg data, GameObject target)
+            {
+                SpatialSerializer.Deserialize(data, target);
+                MapObjects.DeserializePhysBack(target, Color.grey*0.8f);
+            }
+        }
         
         #endregion
     }

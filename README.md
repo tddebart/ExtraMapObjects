@@ -44,7 +44,3 @@ Example:
   - gray
 
 </details>
-
-## Known Issues
- - If you load a map the colored blocks are not shown properly in the editor  
-You can fix this by saving the map
